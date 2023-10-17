@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>982728142194-pd0racbilvnqq10ftqb26mvavqo8nuun.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.982728142194-pd0racbilvnqq10ftqb26mvavqo8nuun</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC72dYhKedJAf8P164OMajoL0gCi8x82pk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>982728142194</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.sajiloYatra.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>sajilo-yatra-2bf06</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sajilo-yatra-2bf06.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:982728142194:ios:f4326bd6cd0cdd5a5f41eb</string>
+</dict>
+</plist>
