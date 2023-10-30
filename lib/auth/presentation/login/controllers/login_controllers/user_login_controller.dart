@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sajilo_yatra/utils/bottom_bar/bottom_bar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../../core/db_client/db_client.dart';
-
+import 'package:logger/logger.dart';
 import '../../../../../dashboard/presentation/views/dashboard_screen.dart';
 import '../../../../data/models/login_models/login_request_model.dart';
 import '../../../../data/models/login_models/login_response_model.dart';
@@ -15,8 +17,11 @@ import 'auth_state.dart';
 class AuthController extends StateNotifier<AuthState> {
   final AuthRepo authRepository;
   final DbClient dbClient;
+  var logger = Logger(
+    printer: PrettyPrinter(),
+  );
   AuthController({required this.authRepository, required this.dbClient})
-      : super(AuthState.loading()) {
+      : super(const AuthState.loading()) {
     checkLogin();
   }
   checkLogin() async {
@@ -49,12 +54,19 @@ class AuthController extends StateNotifier<AuthState> {
             left: 20),
       ));
     }, (r) async {
+      logger.d(r.token);
+      // Obtain shared preferences.
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+// Save an String value to 'action' key.
+      await prefs.setString(r.token, 'tokens');
+
       await dbClient.setData(dbKey: "token", value: r.toJson().toString());
       state = AuthState.loggedIn(r);
       if (context.mounted) {
         Navigator.of(context).pushAndRemoveUntil(
             CupertinoPageRoute(
-              builder: (context) => Dashboard(),
+              builder: (context) => const BottomBar(),
             ),
             (route) => false);
       }

@@ -8,12 +8,14 @@ class AppConst {
   static const String kappBarServices = "Services";
   static const String kappBarAttendance = "Attendance";
   static const String kappBarProfile = "Profile";
+  static const String kProfile = "PROFILE";
   static const String kcheckMail = "Check your mail";
   static const String kappBarLocation = "Location";
   static const String kDestination = "Confirm Destination";
   static const String kTicket = "Ticket";
   static const String kappBarAge = "Age";
   static const String kTrip = "Your Trip";
+  static const String kHistory = "History";
   static const String kappBarDOB = "Date of Birth";
   static const String kappBarUpdateProfile = "Update Profile";
   static const String kappBarChangePassword = "Change Password";
@@ -22,6 +24,7 @@ class AppConst {
   //
   static const String kTakeAttendance = "Take Attendance";
   static const String kcancel = "Cancel";
+  static const String kHelp = "Help";
   static const String klogoutMessage = "Log Out Successfully";
   static String kalreadyHaveAccount = "Already have an account?";
   static String kdontReceivedCode = "Don't received code?";
@@ -37,6 +40,7 @@ class AppConst {
   static String kforgotPasswordTitle = "Forgot Password";
   static String kenter4digitscode = "Enter 4 Digits Code";
   static String kLogin = "Login";
+  static String kLogout = "Logout";
   static String kCar = "Car";
   static String kLoginAccount = "Login Account";
   static String ksend = "Send";
@@ -96,6 +100,7 @@ class AppConst {
   static String loading = "Loading Address...";
   static String kSearchLocation = "Search location";
   static String kWork = "Work";
+  static String kOffers = "Offers";
   static String kSetHome = "Set Home Address";
   static String kSetWork = "Set Work Address";
   static String kcamera = "Camera";

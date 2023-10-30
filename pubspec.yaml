@@ -61,6 +61,8 @@ dependencies:
   location_picker_flutter_map: ^1.2.2
   flutter_map_tappable_polyline: ^5.0.0
   flutter_polyline_points: ^2.0.0
+  logger: ^2.0.2+1
+  loader_skeleton: ^0.0.4
   
 
 dev_dependencies:

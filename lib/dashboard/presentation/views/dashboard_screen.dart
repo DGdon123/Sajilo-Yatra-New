@@ -12,6 +12,7 @@ import 'package:sajilo_yatra/offers/offerone%20copy%204.dart';
 import 'package:sajilo_yatra/offers/offerone%20copy%205.dart';
 import 'package:sajilo_yatra/offers/offerone%20copy.dart';
 import 'package:sajilo_yatra/offers/offerone.dart';
+import 'package:sajilo_yatra/profile/presentation/views/profile_screen.dart';
 import 'package:sajilo_yatra/ride/data/address_model.dart';
 import 'package:sajilo_yatra/ride/presentation/views/home_address.dart';
 import 'package:sajilo_yatra/ride/presentation/views/home_destination.dart';
@@ -203,7 +204,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
               color: CupertinoColors.systemGrey4,
               iconSize: 9.w,
               onPressed: () {
-                pushAndRemoveUntil(context, const LoginScreen());
+                pushAndRemoveUntil(context, const Profile());
               },
             )
           ],
@@ -1068,7 +1069,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                       const SizedBox(width: AppDimensions.paddingLARGE),
                       InkWell(
                         onTap: () {
-                          normalNav(context, const OfferFour());
+                          normalNav(context, const OfferFive());
                         },
                         child: Row(
                           children: [
@@ -1176,7 +1177,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                       const SizedBox(width: AppDimensions.paddingLARGE),
                       InkWell(
                         onTap: () {
-                          normalNav(context, const OfferFive());
+                          normalNav(context, const OfferSix());
                         },
                         child: Row(
                           children: [
@@ -1284,7 +1285,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                       const SizedBox(width: AppDimensions.paddingLARGE),
                       InkWell(
                         onTap: () {
-                          normalNav(context, const OfferSix());
+                          normalNav(context, const OfferTwo());
                         },
                         child: Row(
                           children: [
@@ -1320,7 +1321,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                                   const SizedBox(
                                       height: AppDimensions.paddingSMALL),
                                   Text(
-                                    "SAVE Rs: 500",
+                                    "SAVE Rs: 200",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: AppDimensions.body_16,
@@ -1331,7 +1332,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                                             .kappsecondaryColorBlack),
                                   ),
                                   Text(
-                                    "on Five Ticket/Ride",
+                                    "on KTM Tickets",
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontSize: AppDimensions.body_13,
@@ -1369,7 +1370,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                                                   AppColorConst.kappWhiteColor),
                                         ),
                                         Text(
-                                          "TBGGFY94",
+                                          "UIGF78",
                                           style: TextStyle(
                                               fontSize: AppDimensions.body_13,
                                               letterSpacing: 0.06.dp,

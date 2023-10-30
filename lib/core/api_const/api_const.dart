@@ -1,9 +1,9 @@
 class ApiConst {
 //API
   // static const String baseUrl = "https://hrdc.teamym.com/api/";
-  static const String baseUrl = "http://192.168.1.24:5000/api/";
+  static const String baseUrl = "http://192.168.1.10:5000/api/";
   //Auth
-  static const String kauthExpress = "api";
+  static const String kauthExpress = "userinfo";
   static const String kauthVSignin = "vsignin";
   static const String kauthVRegister = "vehicleRegister";
   static const String kauthSignIn = "signin";
