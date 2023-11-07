@@ -195,6 +195,7 @@ class _OfferFourState extends State<OfferFour> {
                     Container(
                       height: UiHelper.displayHeight(context) * 0.06,
                       width: UiHelper.displayWidth(context) * 0.96,
+                      alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: const Color(0xFFF7F7F7),
                         borderRadius:
@@ -213,11 +214,10 @@ class _OfferFourState extends State<OfferFour> {
                         "Save Rs: 2000 on 45 Min Ride",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          height: 2.8,
                           color: Color(0xff2222222),
-                          fontSize: 19.5,
-                          fontFamily: "BalooTammudu2",
-                          fontWeight: FontWeight.w500,
+                          fontSize: AppDimensions.body_18,
+                          fontFamily: AppFont.lProductsanfont,
+                          fontWeight: AppDimensions.fontNormal,
                         ),
                       ),
                     ),

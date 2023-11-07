@@ -46,12 +46,12 @@ class ProfileResponseModel {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'id': id,
+      '_id': id,
       'name': name,
       'email': email,
       'gender': gender,
       'age': age,
-      'phone': phone,
+      'phoneNumber': phone,
       'location': location,
       'dob': dob,
     };
@@ -59,12 +59,12 @@ class ProfileResponseModel {
 
   factory ProfileResponseModel.fromMap(Map<String, dynamic> map) {
     return ProfileResponseModel(
-      id: map['id'] as String,
+      id: map['_id'] as String,
       name: map['name'] as String,
       email: map['email'] as String,
       gender: map['gender'] as String,
       age: map['age'] as int,
-      phone: map['phone'] as String,
+      phone: map['phoneNumber'] as String,
       location: map['location'] as String,
       dob: map['dob'] as String,
     );
@@ -76,7 +76,7 @@ class ProfileResponseModel {
 
   @override
   String toString() {
-    return 'ProfileResponseModel(id: $id, name: $name, email: $email, gender: $gender, age: $age, phone: $phone, location: $location, dob: $dob)';
+    return 'ProfileResponseModel(_id: $id, name: $name, email: $email, gender: $gender, age: $age, phoneNumber: $phone, location: $location, dob: $dob)';
   }
 
   @override

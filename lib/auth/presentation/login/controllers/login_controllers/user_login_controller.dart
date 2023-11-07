@@ -54,12 +54,12 @@ class AuthController extends StateNotifier<AuthState> {
             left: 20),
       ));
     }, (r) async {
-      logger.d(r.token);
+      logger.d(r.id);
       // Obtain shared preferences.
       final SharedPreferences prefs = await SharedPreferences.getInstance();
 
 // Save an String value to 'action' key.
-      await prefs.setString(r.token, 'tokens');
+      await prefs.setString('tokens', r.id);
 
       await dbClient.setData(dbKey: "token", value: r.toJson().toString());
       state = AuthState.loggedIn(r);

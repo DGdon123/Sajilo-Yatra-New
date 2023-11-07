@@ -63,6 +63,8 @@ dependencies:
   flutter_polyline_points: ^2.0.0
   logger: ^2.0.2+1
   loader_skeleton: ^0.0.4
+  advance_expansion_tile: ^1.0.2
+  bottom_sheet: ^4.0.0
   
 
 dev_dependencies:

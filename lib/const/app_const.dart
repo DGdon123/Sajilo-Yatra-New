@@ -14,6 +14,7 @@ class AppConst {
   static const String kDestination = "Confirm Destination";
   static const String kTicket = "Ticket";
   static const String kappBarAge = "Age";
+  static const String kEditProfile = "Edit Profile";
   static const String kTrip = "Your Trip";
   static const String kHistory = "History";
   static const String kappBarDOB = "Date of Birth";
@@ -105,6 +106,8 @@ class AppConst {
   static String kSetWork = "Set Work Address";
   static String kcamera = "Camera";
   static String kgallery = "Gallery";
+  static String kviewProfile = "View Profile Picture";
+  static String kchangeProfile = "Change Profile Picture";
   static String kchooseYouImage = "Choose your image";
   static String kMap = "Set on Map";
   static String teacher = "Teacher";

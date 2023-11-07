@@ -924,7 +924,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
-                                      children: [
+                                    children: [
                                         Text(
                                           "CODE : ",
                                           style: TextStyle(
@@ -957,7 +957,7 @@ class _MyHelloState extends ConsumerState<Dashboard> {
                             ),
                           ],
                         ),
-                      ),
+                      ),  
                       const SizedBox(width: AppDimensions.paddingLARGE),
                       InkWell(
                         onTap: () {

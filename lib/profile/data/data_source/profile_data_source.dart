@@ -15,15 +15,11 @@ class ProfileDataSourceImp implements ProfileDataSource {
 
   ProfileDataSourceImp(this.apiClient);
   @override
-  Future<ProfileResponseModel> profiledata(ProfileParams hello) async {
-    final response =
-        await apiClient.request(type: "get", path: ApiConst.kauthExpress);
+  Future<ProfileResponseModel> profiledata(ProfileParams token) async {
+    final response = await apiClient.request(
+        type: "get", path: "${ApiConst.kuserinfo}/${token.token}");
 
-    // Handle the response format
-    final dynamic parsedResponse =
-        json.decode(response); // Assuming the response is in JSON format
-
-    return ProfileResponseModel.fromMap(parsedResponse);
+    return ProfileResponseModel.fromMap(response);
   }
 }
 
