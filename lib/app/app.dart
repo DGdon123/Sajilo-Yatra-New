@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:sajilo_yatra/app/splash_screen.dart';
 import 'package:sajilo_yatra/utils/bottom_bar/bottom_bar.dart';
+import 'package:sajilo_yatra/utils/bottom_bar/vehicle_bottom_bar.dart';
 
 import '../auth/presentation/login/controllers/login_controllers/user_login_controller.dart';
 
@@ -36,7 +37,7 @@ class MyApplication extends ConsumerWidget {
                   loggedOut: () {
                     return vehicleOwnerLoggedInState.when(
                       loggedIn: (vehicleOwnerData) {
-                        return VehicleOwner_Reset_Password();
+                        return const VehicleBottomBar();
                       },
                       loggedOut: () {
                         return const LoginScreen();

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sajilo_yatra/utils/bottom_bar/vehicle_bottom_bar.dart';
 
 import '../../../../../const/app_fonts.dart';
 import '../../../../../core/db_client/db_client.dart';
@@ -20,7 +21,7 @@ class VAuthController extends StateNotifier<AuthState> {
   final AuthRepo vauthRepository;
   final DbClient dbClient;
   VAuthController({required this.vauthRepository, required this.dbClient})
-      : super(AuthState.loading()) {
+      : super(const AuthState.loading()) {
     checkLogin();
   }
   Future<void> checkLogin() async {
@@ -63,29 +64,9 @@ class VAuthController extends StateNotifier<AuthState> {
       await dbClient.setData(dbKey: "token", value: r.toJson().toString());
       state = AuthState.loggedIn(r);
       if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          duration: const Duration(milliseconds: 1000),
-          content: Text(
-            "Welcome to HRDC",
-            style: const TextStyle(fontFamily: AppFont.kProductsanfont),
-          ),
-          behavior: SnackBarBehavior.floating,
-          backgroundColor: Colors.green,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          margin: EdgeInsets.only(
-              bottom: MediaQuery.of(context).viewInsets.bottom == 0
-                  ? MediaQuery.of(context).size.height - 100
-                  : MediaQuery.of(context).size.height -
-                      MediaQuery.of(context).viewInsets.bottom -
-                      10,
-              right: 20,
-              left: 20),
-        ));
         Navigator.of(context).pushAndRemoveUntil(
             CupertinoPageRoute(
-              builder: (context) => Home(),
+              builder: (context) => const VehicleBottomBar(),
             ),
             (route) => false);
       }
@@ -93,7 +74,7 @@ class VAuthController extends StateNotifier<AuthState> {
   }
 
   logout(BuildContext context) async {
-    await dbClient.reset();
+    await dbClient.removeData(dbKey: "token");
     state = const AuthState.loggedOut();
     if (!mounted) return;
     Navigator.of(context).pushAndRemoveUntil(

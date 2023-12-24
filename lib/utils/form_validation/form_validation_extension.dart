@@ -81,6 +81,13 @@ extension EmailValidator on String {
     return null;
   }
 
+  String? isMeetValid(String? value) {
+    if (value!.isEmpty) {
+      return "Please enter meeting location";
+    }
+    return null;
+  }
+
   String? isPasswordValid(String? value) {
     if (value!.isEmpty) {
       return 'Password field cannot be empty';
@@ -138,6 +145,13 @@ extension EmailValidator on String {
     return null;
   }
 
+  String? isDepartDOB(String? value) {
+    if (value!.isEmpty) {
+      return "Please enter your departure date";
+    }
+    return null;
+  }
+
   String? isTokenValidate(String? value) {
     if (value!.isEmpty) {
       return "Please enter your token";
@@ -187,6 +201,34 @@ extension EmailValidator on String {
   String? isVehicleFacilityValidate(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please select a vehicle facility';
+    }
+    return null;
+  }
+
+  String? isDepartingTime(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please select a departing time';
+    }
+    return null;
+  }
+
+  String? isArrivingTime(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please select an arriving time';
+    }
+    return null;
+  }
+
+  String? isPrice(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Seat Price field cannot be empty';
+    }
+    if (int.tryParse(value) == null) {
+      return 'Seat Price must be a valid number';
+    }
+    final age = int.parse(value);
+    if (age <= 100) {
+      return 'Seat Price must be over or equals to 100';
     }
     return null;
   }

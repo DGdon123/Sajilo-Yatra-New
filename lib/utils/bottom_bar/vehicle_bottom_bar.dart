@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sajilo_yatra/offers/offers%20copy.dart';
 import 'package:sajilo_yatra/offers/offers.dart';
+import 'package:sajilo_yatra/vehicle_owners_dashboard/presentation/views/vehicle_owners_dashboard_screen.dart';
 import '../../auth/presentation/login/views/main_login_screen.dart';
 import '../../auth/presentation/login/views/users_forget_password/user_forget_password_screen.dart';
 import '../../const/app_colors_const.dart';
@@ -10,16 +11,16 @@ import '../../users_dashboard/presentation/views/dashboard_screen.dart';
 import '../nav_states/nav_notifier.dart';
 import 'package:floating_navigation_bar/floating_navigation_bar.dart';
 
-class BottomBar extends ConsumerStatefulWidget {
-  const BottomBar({Key? key}) : super(key: key);
+class VehicleBottomBar extends ConsumerStatefulWidget {
+  const VehicleBottomBar({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<BottomBar> createState() => _BottomBarState();
+  ConsumerState<VehicleBottomBar> createState() => _BottomBarState();
 }
 
-class _BottomBarState extends ConsumerState<BottomBar> {
+class _BottomBarState extends ConsumerState<VehicleBottomBar> {
   List<Widget> pages = [
-    const Dashboard(),
+    const VehicleOwnerDashboard(),
     const Offers1(),
     Forgot_Password(),
   ];

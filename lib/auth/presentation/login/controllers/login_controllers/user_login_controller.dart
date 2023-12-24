@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../../core/db_client/db_client.dart';
 import 'package:logger/logger.dart';
-import '../../../../../dashboard/presentation/views/dashboard_screen.dart';
+import '../../../../../users_dashboard/presentation/views/dashboard_screen.dart';
 import '../../../../data/models/login_models/login_request_model.dart';
 import '../../../../data/models/login_models/login_response_model.dart';
 import '../../../../data/repositories/auth_repository.dart';
@@ -37,7 +37,7 @@ class AuthController extends StateNotifier<AuthState> {
     final result = await authRepository.loginrep(loginRequestModel);
     return result.fold((l) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        duration: const Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 1700),
         content: Text(l.message),
         behavior: SnackBarBehavior.floating,
         backgroundColor: Colors.red,
@@ -74,7 +74,7 @@ class AuthController extends StateNotifier<AuthState> {
   }
 
   logout(BuildContext context) async {
-    await dbClient.reset();
+    await dbClient.removeData(dbKey: "token");
     state = const AuthState.loggedOut();
     if (!mounted) return;
     Navigator.of(context).pushAndRemoveUntil(

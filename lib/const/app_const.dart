@@ -12,10 +12,13 @@ class AppConst {
   static const String kcheckMail = "Check your mail";
   static const String kappBarLocation = "Location";
   static const String kDestination = "Confirm Destination";
+  static const String kWorks = "Works";
   static const String kTicket = "Ticket";
   static const String kappBarAge = "Age";
   static const String kEditProfile = "Edit Profile";
   static const String kTrip = "Your Trip";
+  static const String kLeaving = "Leaving From";
+  static const String kGoing = "Going To";
   static const String kHistory = "History";
   static const String kappBarDOB = "Date of Birth";
   static const String kappBarUpdateProfile = "Update Profile";

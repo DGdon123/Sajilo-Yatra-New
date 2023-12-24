@@ -187,7 +187,7 @@ class _MyAppState extends ConsumerState<Home> {
                             color: const Color(0xff2222222)),
                         TextButton(
                           onPressed: () {
-                            normalNav(context, const BottomBar());
+                            normalNav(context, Forgot_Password());
                           },
                           child: Container(
                             margin: const EdgeInsets.only(top: 11),
